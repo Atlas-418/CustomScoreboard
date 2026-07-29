@@ -1,0 +1,15 @@
+{
+	"Name": "Atlas418.CustomScoreboard",
+	"Description": "A shitty custom scoreboard for displaying more stats",
+	"LoadPriority": 1,
+	"Version": "1.0.0",
+	"Scripts": [
+		{
+			"Path": "client/cl_custom_scoreboard.nut",
+			"RunOn": "CLIENT && MP",
+			"ClientCallback": {
+				"After": "CustomScoreboard_Init"
+			}
+		}
+	]
+}

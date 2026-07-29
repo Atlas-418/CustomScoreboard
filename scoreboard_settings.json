@@ -1,0 +1,110 @@
+{
+	"settings": {
+		"centered": false,
+		"rowHeight": 28,
+		"rowSpacing": 5,
+		"columnGap": 0,
+		"colors": {
+			"friendly":     [40, 80, 140, 160],
+			"enemy":        [140, 50, 45, 160],
+			"self":         [140, 120, 40, 180],
+			"party":        [80, 160, 80, 180],
+			"friendly_dim": [20, 40, 70, 160],
+			"enemy_dim":    [70, 25, 25, 160],
+			"self_dim":     [70, 60, 20, 160],
+			"party_dim":    [40, 80, 40, 160]
+		}
+	},
+	
+	"columnPresets": [
+		{ "name": "name",
+			"title": "PLAYER",   
+			"stat": "NAME",
+			"textParty": "party",
+			"background": "friendly",
+			"backgroundSelf": "self",
+			"backgroundEnemy": "enemy"
+		},
+		{ "name": "att_score", 
+			"title": "SCORE",   
+			"stat": "PGS_ASSAULT_SCORE", 
+			"width": 6,
+			"backgroundSelf": "self_dim",
+			"backgroundFriendly": "friendly_dim",
+			"backgroundEnemy": "enemy_dim"
+		},
+		{ "name": "pilot_kills", 
+			"title": "KILLS",   
+			"stat": "PGS_PILOT_KILLS",   
+			"width": 6,
+			"backgroundSelf": "self_dim",
+			"backgroundFriendly": "friendly_dim",
+			"backgroundEnemy": "enemy_dim"
+		 },
+		{ "name": "titan_kills", 
+			"title": "TITANS",  
+			"stat": "PGS_TITAN_KILLS",   
+			"width": 7,
+			"backgroundSelf": "self_dim",
+			"backgroundFriendly": "friendly_dim",
+			"backgroundEnemy": "enemy_dim"
+		},
+		{ "name": "minion_kills", 
+			"title": "MINIONS", 
+			"stat": "PGS_NPC_KILLS",     
+			"width": 8,
+			"backgroundSelf": "self_dim",
+			"backgroundFriendly": "friendly_dim",
+			"backgroundEnemy": "enemy_dim"
+		},
+		{ "name": "deaths", 
+			"title": "DEATHS",  
+			"stat": "PGS_DEATHS",        
+			"width": 7,
+			"backgroundSelf": "self_dim",
+			"backgroundFriendly": "friendly_dim",
+			"backgroundEnemy": "enemy_dim"
+		},
+		{ "name": "ping", 
+			"title": "PING", 
+			"stat": "PGS_PING",          
+			"width": 5,
+			"backgroundSelf": "self_dim",
+			"backgroundFriendly": "friendly_dim",
+			"backgroundEnemy": "enemy_dim"
+		},
+		{ "name": "generation",
+			"title": "GEN",
+			"stat": "PGS_GEN",
+			"width": 4,
+			"backgroundSelf": "self_dim",
+			"backgroundFriendly": "friendly_dim",
+			"backgroundEnemy": "enemy_dim"
+		},
+		{ "name": "assists",
+			"title": "ASSISTS",
+			"stat": "PGS_ASSISTS",
+			"width": 8,
+			"backgroundSelf": "self_dim",
+			"backgroundFriendly": "friendly_dim",
+			"backgroundEnemy": "enemy_dim"
+		}
+	],
+
+	"aitdm": {
+		"sortMode": {
+			"stat": "PGS_AD",
+			"descending": true,
+			"teamsSplit": false
+		},
+		"columns": [
+			"name",
+			"att_score",
+			"pilot_kills",
+			"titan_kills",
+			"minion_kills",
+			"deaths",
+			"ping"
+		]
+	}
+}

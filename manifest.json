@@ -1,0 +1,9 @@
+{
+    "name": "Custom-Scoreboard",
+    "version_number": "1.0.0",
+    "website_url": "",
+    "description": "A custom scoreboard",
+    "dependencies": [
+        "northstar-Northstar-1.31.10"
+    ]
+}

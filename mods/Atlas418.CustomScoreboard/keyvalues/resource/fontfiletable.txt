@@ -1,0 +1,15 @@
+// Keyvalues PATCH (Northstar's keyvalues/ merge system - #base-chained with
+// vanilla + every other mod's patch of the same file, NOT a full file
+// replacement). Root name must match the vanilla file's own root key exactly
+// ("FontFileTable") so this merges as a sibling entry instead of creating an
+// orphan tree - same technique as our hudscoreboard.res/sourcescheme.res
+// patches.
+//
+// Registers our bundled JetBrains Mono NL Regular (OFL-licensed, see
+// jetbrainsMono-OFL.txt) under a font name our own sourcescheme.res patch
+// references (cScoreboardStatFixed/cScoreboardName) - see gen_hudscoreboard_patch.py for
+// where those get used.
+FontFileTable
+{
+	"jetbrainsMono"			"resource/jetbrainsMono.ttf"
+}
