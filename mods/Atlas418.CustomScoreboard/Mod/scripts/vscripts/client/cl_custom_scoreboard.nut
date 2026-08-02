@@ -192,7 +192,7 @@ global function CustomScoreboard_Init
 const string CUSTOM_CONFIG_FILE = "scoreboard_settings.json"
 
 const int MAX_LIST_SLOTS = 32            // must match the cScoreboardPlayerName_N count generated into hudscoreboard.res
-const int MAX_STAT_COLUMNS = 12          // must match the cScoreboardHeaderStat_N / cScoreboardPlayerStat_N_C count generated into hudscoreboard.res
+const int MAX_STAT_COLUMNS = 8           // must match the cScoreboardHeaderStat_N / cScoreboardPlayerStat_N_C count generated into hudscoreboard.res
 const float LIST_REFRESH_INTERVAL = 0.5  // seconds between player list refreshes while the scoreboard is visible
 
 // Layout numbers - must match gen_hudscoreboard_patch.py, since that script

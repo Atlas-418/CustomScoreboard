@@ -8,7 +8,7 @@
 			"friendly":     [40, 80, 140, 160],
 			"enemy":        [140, 50, 45, 160],
 			"self":         [140, 120, 40, 180],
-			"party":        [80, 160, 80, 180],
+			"party":        [80, 255, 80, 180],
 			"friendly_dim": [20, 40, 70, 160],
 			"enemy_dim":    [70, 25, 25, 160],
 			"self_dim":     [70, 60, 20, 160],
@@ -20,9 +20,9 @@
 		{ "name": "name",
 			"title": "PLAYER",   
 			"stat": "NAME",
-			"textParty": "party",
 			"background": "friendly",
 			"backgroundSelf": "self",
+			"backgroundParty": "party_dim",
 			"backgroundEnemy": "enemy"
 		},
 		{ "name": "att_score", 
@@ -30,6 +30,7 @@
 			"stat": "PGS_ASSAULT_SCORE", 
 			"width": 6,
 			"backgroundSelf": "self_dim",
+			"backgroundParty": "party_dim",
 			"backgroundFriendly": "friendly_dim",
 			"backgroundEnemy": "enemy_dim"
 		},
@@ -38,6 +39,7 @@
 			"stat": "PGS_PILOT_KILLS",   
 			"width": 6,
 			"backgroundSelf": "self_dim",
+			"backgroundParty": "party_dim",
 			"backgroundFriendly": "friendly_dim",
 			"backgroundEnemy": "enemy_dim"
 		 },
@@ -46,6 +48,16 @@
 			"stat": "PGS_TITAN_KILLS",   
 			"width": 7,
 			"backgroundSelf": "self_dim",
+			"backgroundParty": "party_dim",
+			"backgroundFriendly": "friendly_dim",
+			"backgroundEnemy": "enemy_dim"
+		},
+		{ "name": "titan_damage",
+			"title": "DAMAGE",
+			"stat": "PGS_ASSAULT_SCORE",
+			"width": 7,
+			"backgroundSelf": "self_dim",
+			"backgroundParty": "party_dim",
 			"backgroundFriendly": "friendly_dim",
 			"backgroundEnemy": "enemy_dim"
 		},
@@ -54,6 +66,7 @@
 			"stat": "PGS_NPC_KILLS",     
 			"width": 8,
 			"backgroundSelf": "self_dim",
+			"backgroundParty": "party_dim",
 			"backgroundFriendly": "friendly_dim",
 			"backgroundEnemy": "enemy_dim"
 		},
@@ -62,6 +75,7 @@
 			"stat": "PGS_DEATHS",        
 			"width": 7,
 			"backgroundSelf": "self_dim",
+			"backgroundParty": "party_dim",
 			"backgroundFriendly": "friendly_dim",
 			"backgroundEnemy": "enemy_dim"
 		},
@@ -70,6 +84,7 @@
 			"stat": "PGS_PING",          
 			"width": 5,
 			"backgroundSelf": "self_dim",
+			"backgroundParty": "party_dim",
 			"backgroundFriendly": "friendly_dim",
 			"backgroundEnemy": "enemy_dim"
 		},
@@ -78,6 +93,7 @@
 			"stat": "PGS_GEN",
 			"width": 4,
 			"backgroundSelf": "self_dim",
+			"backgroundParty": "party_dim",
 			"backgroundFriendly": "friendly_dim",
 			"backgroundEnemy": "enemy_dim"
 		},
@@ -86,6 +102,34 @@
 			"stat": "PGS_ASSISTS",
 			"width": 8,
 			"backgroundSelf": "self_dim",
+			"backgroundParty": "party_dim",
+			"backgroundFriendly": "friendly_dim",
+			"backgroundEnemy": "enemy_dim"
+		},
+		{ "name": "kills",
+			"title": "KILLS",
+			"stat": "PGS_KILLS",
+			"width": 6,
+			"backgroundSelf": "self_dim",
+			"backgroundParty": "party_dim",
+			"backgroundFriendly": "friendly_dim",
+			"backgroundEnemy": "enemy_dim"
+		},
+		{ "name": "defense",
+			"title": "DEFENSE",
+			"stat": "PGS_DEFENSE_SCORE",
+			"width": 8,
+			"backgroundSelf": "self_dim",
+			"backgroundParty": "party_dim",
+			"backgroundFriendly": "friendly_dim",
+			"backgroundEnemy": "enemy_dim"
+		},
+		{ "name": "bonus",
+			"title": "BONUS",
+			"stat": "PGS_SCORE",
+			"width": 6,
+			"backgroundSelf": "self_dim",
+			"backgroundParty": "party_dim",
 			"backgroundFriendly": "friendly_dim",
 			"backgroundEnemy": "enemy_dim"
 		}
@@ -93,7 +137,6 @@
 
 	"aitdm": {
 		"sortMode": {
-			"stat": "PGS_AD",
 			"descending": true,
 			"teamsSplit": false
 		},
@@ -105,6 +148,87 @@
 			"minion_kills",
 			"deaths",
 			"ping"
+		]
+	},
+
+	"at": {
+		"sortMode": {
+			"descending": true,
+			"teamsSplit": false
+		},
+		"columns": [
+			"name",
+			"att_score",
+			"bonus",
+			"kills",
+			"ping"
+		]
+	},
+
+	"cp": {
+		"sortMode": {
+			"descending": true,
+			"teamsSplit": false
+		},
+		"columns": [
+			"name",
+			"att_score",
+			"defense",
+			"kills",
+			"ping"
+		]
+	},
+
+	"ps": {
+		"sortMode": {
+			"descending": true,
+			"teamsSplit": false
+		},
+		"columns": [
+			"name",
+			"kills",
+			"deaths",
+			"assists",
+			"ping"
+		]
+	},
+
+	"lts": {
+		"sortMode": {
+			"descending": true,
+			"teamsSplit": true
+		},
+		"columns": [
+			"name",
+			"titan_kills",
+			"titan_damage",
+			"ping"
+		]
+	},
+
+	"lf": {
+		"sortMode": {
+			"descending": true,
+			"teamsSplit": true
+		},
+		"columns": [
+			"name",
+			"kills",
+			"att_score",
+			"deaths",
+			"ping"
+		]
+	},
+	"ttdm": {
+		"sortMode": {
+			"descending": true,
+			"teamsSplit": false
+		},
+		"columns": [
+			"name",
+			"titan_kills",
+			"deaths",
+			"titan_damage"
 		]
 	}
 }

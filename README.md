@@ -56,7 +56,7 @@ Optional, local-only JSON file. Not neccecary.
     - `stat` - string, a `PGS_*` stat name or one of the sentinels below (same accepted values as `columns[].stat`). Unrecognized name -> warning + falls back to `PGS_KILLS`.
     - `descending` - bool. Default `true`.
     - `teamsSplit` - bool. Default `false`. Groups the list into team blocks (your team first) instead of one flat ranking.
-  - `columns` - array, up to 12 entries total (name column included). Each entry is either:
+  - `columns` - array, up to 8 entries total (name column included). Each entry is either:
     - a string - the `name` of a `columnPresets` entry, used exactly as defined there, or
     - an object:
       - `title` - string, shown verbatim (not localized). Omit/empty = no header shown above this column.
